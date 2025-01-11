@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Model Upload</title>
+</head>
+<body>
+    <h1>Upload your CSV file and choose an ML model</h1>
+    <form action="/process" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <label for="model">Choose a model:</label>
+        <select name="model" required>
+            <option value="random_forest">Random Forest</option>
+            <option value="decision_tree">Decision Tree</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+
+@app.route('/')
+def index():
+    return "Flask is working! The template might be causing issues."
 
